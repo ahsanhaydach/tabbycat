@@ -9,27 +9,21 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-  'default': {  
-      'ENGINE' : 'firebird',
-      'NAME' : '/var/lib/firebird/2.5/data/firedjango.fdb', # Path to database or db alias
-      'USER' : 'SYSDBA',           # Your db user
-      'PASSWORD' : 'masterkey',    # db user password
-      'HOST' : '127.0.0.1',        # Your host machine
-      'PORT' : '3050',             # If is empty, use default 3050
-      #'OPTIONS' : {'charset':'ISO8859_1'}  #If is not defined, use default UNICODE_FSS
-	}
+ 'default': {
+        'ENGINE'      : 'django.db.backends.postgresql',
+        'NAME'        : '',  # put your PostgreSQL database's name in here
+        'USER'        : '',  # put your PostgreSQL login role's user name in here
+        'PASSWORD'    : '',  # put your PostgreSQL login role's password in here
+        'HOST'        : 'localhost',
+        'PORT'        : '5432',
+        'CONN_MAX_AGE': None,
+    }
 }
 
+# Replace this with your time zone, as defined in the IANA time zone database:
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+TIME_ZONE = 'Australia/Melbourne'
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
-TIME_ZONE = 'Asia/Dhaka'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
